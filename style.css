@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&display=swap');
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('/fonts/DS-DIGI.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url(./images/dragones.jpg);
+  background-repeat: repeat;
+  text-align: center;
+}
+.portrait {
+  height: 500px;
+  width: auto;
+
+  /* Thick, harsh, boxy, websafe colors */
+  border: 6px ridge #ff00ff; /* ridge = ugly 90s 3D effect */
+
+  padding: 4px;
+
+  /* No rounding in 95 */
+  border-radius: 0;
+
+  /* Replace modern shadow with a hard offset block shadow */
+  box-shadow: 4px 4px 0 #00ffff; /* ugly, flat cyan “shadow block” */
+
+  /* Optional: slight background like old <img> borders */
+  background-color: #ffe6ff; /* light pink websafe background */
+}
+
+
+.wordart {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* super 90s */
+  font-size: 60px;
+  color: #ffffff; /* bright pink */
+  text-shadow: 6px 6px 0 #000000; /* red shadow */
+}
+
+.title {
+  display: flex; /* arrange dragons and text in a row */
+  align-items: center; /* vertically center everything */
+  justify-content: center; /* center horizontally */
+  gap: 10px; /* space between dragons and text */
+}
+
+.dragon-left,
+.dragon-right {
+  width: 200px; /* make dragons small */
+  height: auto;
+}
+
+.dragon-right {
+  transform: scaleX(-1); /* flip horizontally */
+}
+
+strong {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 18px;
+}
+
+h2 {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 36px;
+  background: linear-gradient(90deg, red, orange, yellow, violet, red);
+  background-size: 400% 100%; /* makes the gradient big enough to slide */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-slide 8s linear infinite; /* animate infinitely */
+  margin: 0;
+}
+
+@keyframes rainbow-slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+section {
+  background-color: #a9a9a9; /* light grey, old-school */
+  padding: 15px;
+  margin: 15px auto;
+  border: 2px solid #ffffff; /* top & left highlight */
+  border-right: 2px solid #666666; /* bottom & right shadow */
+  border-bottom: 2px solid #666666;
+  border-left: 2px solid #ffffff;
+  max-width: 800px; /* keeps content centered */
+  box-shadow: 2px 2px 0 #aaa; /* subtle depth */
+}
+
+section h3 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+}
+
+section p,
+section ul {
+  font-size: 20px;
+  color: #000;
+}
+
+.gallery-img {
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  border: 2px solid #fff;
+  border-right: 2px solid #888;
+  border-bottom: 2px solid #888;
+  border-left: 2px solid #fff;
+  display: inline-block;
+}
+
+.digital-counter {
+  display: flex;
+  gap: 2px;
+  font-family: 'DS-Digital', monospace;
+  font-size: 36px;
+  justify-content: center;
+}
+
+/* each digit like an old table cell */
+.digital-counter .digit {
+  background-color: black;
+  color: red; /* bright plain red — 1995 displays didn’t do neon shades */
+  padding: 4px 6px;
+  border: 1px solid #880000; /* flat color border */
+  text-align: center;
+
+  /* 1995 NEVER rounded anything */
+  border-radius: 0;
+
+  /* remove shadows, keep primitive “flat” look */
+  box-shadow: none;
+
+  /* feel free to make it even blockier */
+  min-width: 28px;
+}
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* LEFT ARROW */
+h3::before {
+  content: "";
+  display: inline-block;
+  width: 32px;      /* adjust based on arrow size */
+  height: 32px;
+  background-image: url("/images/arrow.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+/* RIGHT ARROW (mirrored) */
+h3::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("/images/arrow.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 8px;
+  margin-top: 10px;
+  transform: scaleX(-1);
+}
+
+h4 {
+  font-size: 24px;
+  color: white;
+  display: inline-flex; /* retro-enough but works */
+  align-items: center;  /* vertically aligns the hearts with the text */
+  justify-content: center;
+  gap: 6px; /* spacing between hearts and text */
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+}
+
+/* Optional: fix heart size so they don’t overpower */
+.love-heart {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle; /* old-school fallback */
+  margin: 0 50px;
+}
+
+
+  .retro-footer {
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 3px ridge #ff66ff;
+  border-bottom: 3px ridge #ff66ff;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Comic Sans MS", "Verdana", sans-serif;
+}
+
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .portrait {
+    max-width: 280px;
+  }
+
+  .title img {
+    width: 60px;
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1.1rem; }
+  
+  .digital-counter {
+    font-size: 1.6rem;
+  }
+  
+  .wordart {
+    font-size: 36px;
+  }
+
+}
