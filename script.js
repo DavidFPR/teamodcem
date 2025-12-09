@@ -1,4 +1,6 @@
-alert('¡Te amo! Feliz 3er mes :)')
+window.addEventListener("load", () => {
+  alert("¡Feliz mesesaurio, mi amor! ❤️");
+});
 
 function updateDaysTogether() {
   const startDate = new Date('2025-09-07'); // First day together
@@ -66,6 +68,7 @@ const motdArray = [
   "Hey, Mona.",
   "¿Quieres ser mi dúo?",
   "Ahorita se te quita el lag, amor.",
+  "¡Feliz mesesaurio!",
   "¡MonDragoooooooon!"
 ];
 
